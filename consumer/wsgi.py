@@ -9,7 +9,7 @@ class Events:
         }
 
     def on_post(self, req, resp):
-        events.append(resp.media)
+        events.append(req.media)
 
 application = falcon.API()
 application.add_route('/events', Events())
